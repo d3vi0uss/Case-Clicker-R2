@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="handleSignup()">Sign Up</button>
+<button onclick="handleLogin()">Login</button>
+
+<script>
+
+async function handleSignup() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { error } = await signup(email, password);
+  alert(error ? error.message : "Account created!");
+}
+
+async function handleLogin() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { error } = await login(email, password);
+
+  if (!error) {
+    window.location.href = "game.html";
+  } else {
+    alert(error.message);
+  }
+}
+
+</script>
+
+</body>
+</html>
