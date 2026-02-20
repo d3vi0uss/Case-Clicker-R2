@@ -1,39 +1,14 @@
 body {
-  margin: 0;
-  background: #0a0a0f;
+  background: #111;
   color: white;
   font-family: Arial;
   text-align: center;
 }
 
-.navbar {
-  background: #11111a;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.click-btn {
-  background: #7b2cbf;
-  border: none;
-  padding: 20px 40px;
-  font-size: 22px;
-  border-radius: 10px;
+button {
+  padding: 10px;
+  margin: 5px;
+  background: purple;
   color: white;
-  box-shadow: 0 0 20px #7b2cbf;
-}
-
-.click-btn:active {
-  transform: scale(0.95);
-}
-
-.nav-buttons a {
-  display: inline-block;
-  margin: 8px;
-  padding: 10px 18px;
-  background: #11111a;
-  border-radius: 8px;
-  color: #9d4edd;
-  text-decoration: none;
+  border: none;
 }
